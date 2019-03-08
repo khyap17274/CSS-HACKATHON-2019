@@ -1,0 +1,12 @@
+
+FitnessTracker/local\.properties
+
+EventScheduler/\.idea/
+
+*.bin
+
+*.iml
+
+FitnessTracker/\.idea/
+
+FitnessTracker/\.gradle/
