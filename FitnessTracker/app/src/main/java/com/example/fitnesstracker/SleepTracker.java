@@ -20,7 +20,7 @@ public class SleepTracker extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sleep_tracker);
         timeSlept = findViewById(R.id.example_time);
         date = findViewById(R.id.example_date);
         Date calendar = Calendar.getInstance().getTime();

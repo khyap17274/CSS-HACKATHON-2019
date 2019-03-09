@@ -13,4 +13,7 @@
     <string name="enter_serving_size">enter serving size</string>
     <string name="enter">enter</string>
     <string name="enter_no_of_servings">Enter no of servings</string>
+    <string name="hear_a_lullaby">Hear a Lullaby</string>
+    <string name="track_your_sleep">track your sleep</string>
+    <string name="calorie_counter">Calorie Counter</string>
 </resources>
