@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SleepTracker"
+            android:label="@string/title_activity_sleep_tracker"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".sleepsound"
             android:label="@string/title_activity_sleepsound"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -25,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".FoodActivity" />
-        <activity android:name=".FoodListDisplayActivity"></activity>
+        <activity android:name=".FoodListDisplayActivity" />
     </application>
 
 </manifest>
