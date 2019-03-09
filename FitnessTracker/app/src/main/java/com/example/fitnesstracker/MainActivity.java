@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.List;
@@ -16,9 +17,13 @@ import static com.example.fitnesstracker.MockIntakeList.getIntakes;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button sleepSoundBtn;
-    private Button sleepTrackerBtn;
-    private Button calorieCounterBtn;
+//    private Button sleepSoundBtn;
+//    private Button sleepTrackerBtn;
+//    private Button calorieCounterBtn;
+
+    private ImageButton sleepSoundBtn;
+    private ImageButton sleepTrackerBtn;
+    private ImageButton calorieCounterBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,11 +35,12 @@ public class MainActivity extends AppCompatActivity {
         List<Intake> intakes = getIntakes();
         u.setIntakes(intakes);
         UserInSession userInSession = UserInSession.getInstance(u);
-        goToCalorie();
-        goToSound();
         goToTracker();
+        goToSound();
+        goToCalorie();
 
     }
+
 
     private void goToTracker(){
         sleepTrackerBtn.setOnClickListener(

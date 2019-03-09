@@ -11,27 +11,54 @@
     android:padding="25dp"
     >
 
-    <Button
+    <!--<Button-->
+        <!--android:id="@+id/sleepsound_btn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="149dp"-->
+        <!--android:text="@string/hear_a_lullaby" />-->
+    <!--<Button-->
+        <!--android:id = "@+id/sleeptracker_btn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text = "@string/track_your_sleep"-->
+        <!--android:layout_below="@+id/sleepsound_btn"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:id = "@+id/caloriecounter_btn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/calorie_counter"-->
+        <!--android:layout_below="@+id/sleeptracker_btn"-->
+        <!--/>-->
+    <ImageButton
         android:id="@+id/sleepsound_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:contentDescription="@string/hear_a_lullaby"
+        android:layout_width="120dp"
+        android:layout_height="89dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="149dp"
-        android:text="@string/hear_a_lullaby" />
-    <Button
-        android:id = "@+id/sleeptracker_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text = "@string/track_your_sleep"
+        android:layout_marginTop="50dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/lullaby_icon" />
+
+    <ImageButton
+        android:id="@+id/sleeptracker_btn"
+        android:contentDescription="@string/track_your_sleep"
+        android:layout_width="120dp"
+        android:layout_height="89dp"
         android:layout_below="@+id/sleepsound_btn"
-        />
-    <Button
-        android:id = "@+id/caloriecounter_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/calorie_counter"
+        android:scaleType="fitXY"
+        android:src="@drawable/sleep_icon" />
+
+    <ImageButton
+        android:id="@+id/caloriecounter_btn"
+        android:contentDescription="@string/calorie_counter"
+        android:layout_width="120dp"
+        android:layout_height="89dp"
         android:layout_below="@+id/sleeptracker_btn"
-        />
+        android:scaleType="fitXY"
+        android:src="@drawable/food_icon" />
 
 </RelativeLayout>
