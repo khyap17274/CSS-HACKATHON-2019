@@ -9,6 +9,7 @@
     tools:context=".MainActivity"
     android:gravity="center_horizontal"
     android:padding="25dp"
+    android:background="@android:color/darker_gray"
     >
 
     <!--<Button-->
@@ -33,6 +34,16 @@
         <!--android:text="@string/calorie_counter"-->
         <!--android:layout_below="@+id/sleeptracker_btn"-->
         <!--/>-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="450dp"
+        android:text="What would you like to start with today?"
+        android:layout_marginLeft="50dp"
+        android:textSize="20dp"
+
+        />
+
     <ImageButton
         android:id="@+id/sleepsound_btn"
         android:contentDescription="@string/hear_a_lullaby"
@@ -40,6 +51,7 @@
         android:layout_height="89dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
         android:scaleType="fitXY"
         android:src="@drawable/lullaby_icon" />
 
@@ -50,6 +62,7 @@
         android:layout_height="89dp"
         android:layout_below="@+id/sleepsound_btn"
         android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/sleep_icon" />
 
     <ImageButton
@@ -58,6 +71,7 @@
         android:layout_width="120dp"
         android:layout_height="89dp"
         android:layout_below="@+id/sleeptracker_btn"
+        android:layout_centerHorizontal="true"
         android:scaleType="fitXY"
         android:src="@drawable/food_icon" />
 
