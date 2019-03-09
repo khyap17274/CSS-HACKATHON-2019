@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class ServingDialog extends AppCompatDialogFragment {
     private EditText serving_size_Edittext;
@@ -20,7 +21,7 @@ public class ServingDialog extends AppCompatDialogFragment {
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        LayoutInflater inflater = getActivity().getLayoutInflater();
+        LayoutInflater inflater = Objects.requireNonNull(getActivity()).getLayoutInflater();
         View view = inflater.inflate(R.layout.adjust_serving_size,null);
         builder.setView(view)
                 .setTitle("")
@@ -35,7 +36,7 @@ public class ServingDialog extends AppCompatDialogFragment {
                         double servingNo = Integer.parseInt(serving_size_Edittext.getText().toString());
                         calories *= servingNo;
                         Intake intake = new Intake(new Date(),calories);
-                        User user = new User();
+                        User user = UserInSession.getUser();
                         user.addIntake(intake);
                     }
                 });

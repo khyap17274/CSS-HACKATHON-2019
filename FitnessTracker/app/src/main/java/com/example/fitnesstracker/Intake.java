@@ -2,7 +2,7 @@ package com.example.fitnesstracker;
 
 import java.util.Date;
 
-public class Intake {
+public class Intake implements Comparable<Intake> {
     private Date date;
     private double calories;
 
@@ -13,5 +13,18 @@ public class Intake {
 
     public void add(double c){
         calories += c;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public double getCalories() {
+        return calories;
+    }
+
+    @Override
+    public int compareTo(Intake i) {
+        return date.compareTo(i.getDate());
     }
 }

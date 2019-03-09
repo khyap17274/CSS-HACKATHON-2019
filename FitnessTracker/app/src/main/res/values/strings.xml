@@ -16,4 +16,7 @@
     <string name="hear_a_lullaby">Hear a Lullaby</string>
     <string name="track_your_sleep">track your sleep</string>
     <string name="calorie_counter">Calorie Counter</string>
+    <string name="search">Search</string>
+    <string name="enter_food_item">Enter food item</string>
+    <string name="view_graph">View Graph</string>
 </resources>

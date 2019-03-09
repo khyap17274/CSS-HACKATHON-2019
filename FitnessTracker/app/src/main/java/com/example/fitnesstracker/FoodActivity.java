@@ -1,5 +1,6 @@
 package com.example.fitnesstracker;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,7 @@ public class FoodActivity extends AppCompatActivity {
 
    // public ListView food_listView;
     private Button  search_btn;
+    private Button  graph_btn;
     private EditText search_editText;
 
     @Override
@@ -27,11 +29,12 @@ public class FoodActivity extends AppCompatActivity {
        // test_textView = findViewById(R.id.food_textView);
         search_btn = findViewById(R.id.search_btn);
         search_editText = findViewById(R.id.search_editText);
-      //  food_listView = findViewById(R.id.food_listview);
-        start();
+        graph_btn = findViewById(R.id.graph_btn);
+        search();
+        goToGraph();
     }
 
-    private void start(){
+    private void search(){
         search_btn.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -48,5 +51,17 @@ public class FoodActivity extends AppCompatActivity {
                     }
                 }
         );
+    }
+    private void goToGraph(){
+        graph_btn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(FoodActivity.this,GraphActivity.class);
+                        startActivity(i);
+                    }
+                }
+        );
+
     }
 }

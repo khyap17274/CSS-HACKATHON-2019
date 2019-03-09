@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.List;
+
+import static com.example.fitnesstracker.MockIntakeList.getIntakes;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button sleepSoundBtn;
@@ -22,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         sleepSoundBtn = findViewById(R.id.sleepsound_btn);
         sleepTrackerBtn = findViewById(R.id.sleeptracker_btn);
         calorieCounterBtn = findViewById(R.id.caloriecounter_btn);
+        User u = new User();
+        List<Intake> intakes = getIntakes();
+        u.setIntakes(intakes);
+        UserInSession userInSession = UserInSession.getInstance(u);
         goToCalorie();
         goToSound();
         goToTracker();
