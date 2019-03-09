@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MainActivity.this, sleepsound.class);
+                        Intent intent = new Intent(MainActivity.this, lullaby.class);
                         startActivity(intent);
                     }
                 }

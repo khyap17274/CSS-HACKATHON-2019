@@ -1,6 +1,7 @@
 package com.example.fitnesstracker;
 
 import android.annotation.SuppressLint;
+import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Handler;
 import android.os.Message;
@@ -26,11 +27,21 @@ public class sleepsound extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sleepsound);
 
+        String value= "";
+
+        Bundle extras = getIntent().getExtras();
+        if (extras !=null){
+            value = extras.getString("KEY");
+        }
+
         playBtn = (Button) findViewById(R.id.playBtn);
         elapsedTimeLabel = (TextView) findViewById(R.id.elapsedTimeLabel);
         remainingTimeLabel = (TextView) findViewById(R.id.remainingTimeLabel);
 
-        mp = MediaPlayer.create(this, R.raw.music);
+        Resources res = getApplicationContext().getResources();
+        int soundId = res.getIdentifier(value,"raw", getApplicationContext().getPackageName());
+
+        mp = MediaPlayer.create(this, soundId);
         mp.setLooping(true);
         mp.seekTo(0);
         mp.setVolume(0.5f, 0.5f);

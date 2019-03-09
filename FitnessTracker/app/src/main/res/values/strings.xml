@@ -19,4 +19,5 @@
     <string name="search">Search</string>
     <string name="enter_food_item">Enter food item</string>
     <string name="view_graph">View Graph</string>
+    <string name="title_activity_lullaby">lullaby</string>
 </resources>

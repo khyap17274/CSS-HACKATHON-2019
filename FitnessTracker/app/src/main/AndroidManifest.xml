@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".lullaby"
+            android:label="@string/title_activity_lullaby"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".SleepTracker"
             android:label="@string/title_activity_sleep_tracker"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -30,7 +34,7 @@
         </activity>
         <activity android:name=".FoodActivity" />
         <activity android:name=".FoodListDisplayActivity" />
-        <activity android:name=".GraphActivity"></activity>
+        <activity android:name=".GraphActivity" />
     </application>
 
 </manifest>
