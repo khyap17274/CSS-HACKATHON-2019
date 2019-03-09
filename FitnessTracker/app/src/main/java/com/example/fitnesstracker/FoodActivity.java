@@ -5,13 +5,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.fitnesstracker.food.api.FoodAsyncTask;
 
+import java.util.List;
+
+import static com.example.fitnesstracker.JSONParser.getFoods;
+
 public class FoodActivity extends AppCompatActivity {
 
-    public TextView test_textView;
+   // public ListView food_listView;
     private Button  search_btn;
     private EditText search_editText;
 
@@ -19,9 +24,10 @@ public class FoodActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
-        test_textView = findViewById(R.id.food_textView);
+       // test_textView = findViewById(R.id.food_textView);
         search_btn = findViewById(R.id.search_btn);
         search_editText = findViewById(R.id.search_editText);
+      //  food_listView = findViewById(R.id.food_listview);
         start();
     }
 
