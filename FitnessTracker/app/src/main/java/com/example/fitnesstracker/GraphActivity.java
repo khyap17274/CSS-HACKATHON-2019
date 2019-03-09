@@ -1,5 +1,7 @@
 package com.example.fitnesstracker;
 
+import android.graphics.DashPathEffect;
+import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -23,15 +25,15 @@ public class GraphActivity extends AppCompatActivity {
         setContentView(R.layout.activity_graph);
         GraphView graphView = findViewById(R.id.graph_view);
 
-        series = new LineGraphSeries<DataPoint>();
+        series = new LineGraphSeries<>();
+        LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>();
         List<Intake> intakes = UserInSession.getUser().getIntakes();
         for(Intake i : intakes){
-            series.appendData(new DataPoint(i.getDate(),i.getCalories()),true,6);
+            series.appendData(new DataPoint(i.getDate(),i.getCalories()),true,intakes.size());
+            series2.appendData(new DataPoint(i.getDate(),2000.0),true,intakes.size());
+
         }
         graphView.addSeries(series);
-
-        LineGraphSeries<DataPoint> series2;
-
         graphView.getGridLabelRenderer().setLabelFormatter(new DateAsXAxisLabelFormatter(this));
         graphView.getGridLabelRenderer().setNumHorizontalLabels(6); // only 4 because of the space
 
@@ -44,6 +46,15 @@ public class GraphActivity extends AppCompatActivity {
         graphView.getViewport().setXAxisBoundsManual(true);
 
         graphView.getGridLabelRenderer().setHumanRounding(false);
+
+        Paint paint = new Paint();
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setARGB(100,120,0,0);
+        paint.setStrokeWidth(5);
+        paint.setPathEffect(new DashPathEffect(new float[]{10,20}, 0));
+        series2.setCustomPaint(paint);
+
+        graphView.addSeries(series2);
 
     }
 }
